@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
+    <meta name="viewport" content="width=1920" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>VALA Tech Camp 2017 | Building Simple Tools With APIs | @KathyReid </title>
 
@@ -29,7 +29,7 @@
   <ul>
     <li>@KathyReid</li>
     <li>Building Simple Tools With APIs</li>
-    <li>VALA Tech Camp 2017</li>
+    <li><a href="http://bit.ly/VALA-API">http://bit.ly/VALA-API</a></li>
     <li><img src="img/linux-australia.png" width="10%"></li>
     <li><img src="img/VTC_Facebook_white_12to14.png" width="12%"></li>
   </ul>
@@ -71,7 +71,7 @@
     <h4>Treasure! Yarr!</h4>
     </div>
 
-    <div id="LearningObjectives" class="step slide" data-x="-1500" data-y="-3000">
+    <div id="LearningObjectives" class="step slide" data-x="-1500" data-y="-2000">
     <h1>Learning objectives</h1>
     <h4>Understand the basics of the HTTP protocol</h4>
     <h4>Understand the concept of ReST</h4>
@@ -80,516 +80,201 @@
     <h4>Have a better understanding of where to go next for help on your API journey</h4>
     </div>
 
-    <div id="WhatTools" class="step slide" data-x="-1500" data-y="-3000">
+    <div id="WhatTools" class="step slide" data-x="-1500" data-y="-1000">
     <h1>What tools are you thinking of building?</h1>
     </div>
 
-    <div id="Useful Links" class="step slide" data-x="-1500" data-y="-3000">
-    <h4><a href="http://help.nla.gov.au/trove/building-with-trove/api-technical-guide">Trove API technical guide</a></h4>
-    <h4><a href="http://trove.nla.gov.au/userProfile#developer">Trove User Profile, including API key</a></h4>
-    <h4><a href="http://troveconsole.herokuapp.com/">Trove API console, can be used without key</a></h4>
+    <div id="UsefulLinks" class="step slide" data-x="-1500" data-y="0">
+    <h1>Useful Links</h1>
+    <h4><a href="http://help.nla.gov.au/trove/building-with-trove/api-technical-guide">Trove API technical guide - http://help.nla.gov.au/trove/building-with-trove/api-technical-guide</a></h4>
+    <h4><a href="http://trove.nla.gov.au/userProfile#developer">Trove User Profile, including API key - http://trove.nla.gov.au/userProfile#developer</a></h4>
+    <h4><a href="http://troveconsole.herokuapp.com/">Trove API console, can be used without key - http://troveconsole.herokuapp.com/</a></h4>
     </div>
 
+    <div id="HTTP" class="step slide" data-x="0" data-y="-3000">
+    <h1>Recap of how HTTP works</h1>
+    <h4>What's a <strong>client</strong> and what's a <strong>server</strong>?</h4>
+    <h4>The <strong>request</strong> and <strong>response</strong> life cycle</h4>
+    <h4><em>Let's try it!!!!!!111!!!!</em></h4>
+    </div>
 
+    <div id="TinCans" class="step slide" data-x="0" data-y="-2000">
+    <h2>Tin Cans and String</h2>
+    <p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/8ymgpW">Local Call</em> via Wes Peck on Flickr.</a></p>
+    </div>
 
+    <div id="REST" class="step slide" data-x="0" data-y="-1000">
+    <h1>Representational State Transfer (ReSTful)</h1>
+    <h4>Everything is a <strong>resource</strong></h4>
+    <h4>We can take <strong>actions</strong> on resources, if we are authorised to do so</h4>
+    <h4>We can <strong>act</strong> on a <strong>single resource</strong> without impacting the overall system</h4>
+    </div>
 
+    <div id="RESTVerbs" class="step" data-x="0" data-y="0">
 
-    <div id="ComparisonDevEnvironments" class="step" data-x="-1500" data-y="6000">
-
-    <table id="ComparisonDevEnvTable" class="list-items">
+    <table id="RESTVerbsTable" class="list-items">
     <thead>
     <tr>
-      <th>Platform</th>
-      <th>Physical environment</th>
-      <th>Environment [de]commission</th>
-      <th>Development approach</th>
-      <th>Testing and QA</th>
-      <th>Deployment and release</th>
+      <th>Verb</th>
+      <th>Objective</th>
+      <th>Usage</th>
     </tr>
     </thead>
     <tbody>
 
     <tr>
-
      <td>
-        Early computers
-    </td>
-
-    <td>
-    <ul>
-      <li>Huge - fill a room</li>
-      <li>Not portable</li>
-      <li>Susceptible to environmental failure</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Expensive</li>
-      <li>Time consuming</li>
-      <li>Long lead time</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Laborious</li>
-      <li>Non-automated</li>
-      <li>Errors mean rework ++</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Manual checking</li>
-      <li>No testing automation</li>
-      <li>Minor mistakes, major rework</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Real programmers code in production!</li>
-    </ul>
-    </td>
-
+        <strong>GET</strong>
+      </td>
+      <td>
+      retrieve data from resource
+      </td>
+      <td>
+      links
+      </td>
     </tr>
 
     <tr>
-
      <td>
-        PCs
-    </td>
+        <strong>POST</strong>
+      </td>
+      <td>
+      create new items in resource
+      </td>
+      <td>
+      forms
+      </td>
+    </tr>
 
-    <td>
-    <ul>
-      <li>Smaller - fill a desk</li>
-      <li>(still) not portable</li>
-      <li>Generally robust to environmental failure</li>
-    </ul>
-    </td>
+    <tr>
+     <td>
+        <strong>PUT</strong>
+      </td>
+      <td>
+      replace existing items in resource
+      </td>
+      <td>
+      forms
+      </td>
+    </tr>
 
-    <td>
-    <ul>
-      <li>New environment = new machine</li>
-      <li>Requires installation or imaging</li>
-    </ul>
-    </td>
+    <tr>
+     <td>
+        <strong>PATCH</strong>
+      </td>
+      <td>
+      update existing items in resource
+      </td>
+      <td>
+      forms
+      </td>
+    </tr>
 
-    <td>
-    <ul>
-      <li>Automated tools</li>
-      <li>Heterogenous platforms = headaches</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Automated tools</li>
-      <li>Heterogenous platforms = headaches</li>
-    </ul>
-    </td>
-
-    <td>
-    <ul>
-      <li>Physical install media</li>
-    </ul>
-    </td>
-
-  </tr>
-
-  <tr>
-
-   <td>
-      Web
-  </td>
-
-  <td>
-  <ul>
-    <li>Very small footprint</li>
-  </ul>
-  </td>
-
-  <td>
-  <ul>
-    <li>Simple to set up / tear down</li>
-  </ul>
-  </td>
-
-  <td>
-  <ul>
-    <li>Automated dev tools, mature toolchains</li>
-    <li>Distributed development</li>
-    <li>Strong(ish) standards</li>
-    <li>Test-driven</li>
-  </ul>
-  </td>
-
-  <td>
-  <ul>
-    <li>Equivalent dev / pre-prod environments</li>
-    <li>Automated testing frameworks</li>
-    <li>Strong(ish) standards</li>
-  </ul>
-  </td>
-
-  <td>
-  <ul>
-    <li>Mature - ftp, git push</li>
-  </ul>
-  </td>
-
-</tr>
-
-<tr>
-
- <td>
-    Mobile and wearables
-</td>
-
-<td>
-<ul>
-  <li>Tiny, portal, mobile</li>
-</ul>
-</td>
-
-<td>
-<ul>
-  <li>Disk image, re-image device</li>
-</ul>
-</td>
-
-<td>
-<ul>
-  <li>Hybrid or native?</li>
-  <li>Which platform?</li>
-  <li>Heterogenous devices = headaches</li>
-  <li>Behaviour-driven</li>
-</ul>
-</td>
-
-<td>
-<ul>
-  <li>Emulation services available</li>
-  <li>Distributed testing</li>
-</ul>
-</td>
-
-<td>
-<ul>
-  <li>Requires ecosystem - ie App Store</li>
-</ul>
-</td>
-
-</tr>
+    <tr>
+     <td>
+        <strong>DELETE</strong>
+      </td>
+      <td>
+      delete existing items in resource
+      </td>
+      <td>
+      forms
+      </td>
+    </tr>
 
     </tbody>
     </table>
 
     </div>
 
-
-
-
-
-    <div id="ComparisonDevEnvBody" class="step" data-x="-1500" data-y="7000">
-
-    <table id="ComparisonDevEnvBodyTable" class="list-items">
-    <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Physical environment</th>
-      <th>Environment [de]commission</th>
-      <th>Development approach</th>
-      <th>Testing and QA</th>
-      <th>Deployment and release</th>
-    </tr>
-    </thead>
-    <tbody>
-
-    <tr>
-
-     <td>
-        The human body
-    </td>
-
-    <td>
-        ?
-    </td>
-
-    <td>
-        ?
-    </td>
-
-    <td>
-        ?
-    </td>
-
-    <td>
-        ?
-    </td>
-
-    <td>
-        ?
-    </td>
-
-    </tr>
-
-    <tr>
-
-</tr>
-
-    </tbody>
-    </table>
-
-    </div>
-
-
-
-
-
-
-
-    <!-- ASSUMPTIONS -->
-
-
-    <div id="Assumptions" class="step" data-x="0" data-y="-3000">
-    <h1>Fundamental assumptions</h1>
-    </div>
-
-    <div id="Ninja" class="step slide" data-x="0" data-y="-2000">
-    <h2>Seditious and defiant</h2>
-    <p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/8g2udA">Ninjas</em> via Andrés Álvarez Iglesias on Flickr.</a></p>
-    </div>
-
-    <div id="Assumption1" class="step" data-x="0" data-y="-1000">
-    <h1>Assumption #1:</h1>
-    <h3>If you can't open it, you don't own it.</h3>
-    <h3>And yes, you own your own body.</h3>
-    </div>
-
-    <div id="Assumption2" class="step" data-x="0" data-y="0">
-    <h1>Assumption #2:</h1>
-    <h3>Ethically, it's neither absolutely right or wrong to functionally modify your body. Doing it <em>well</em> minimises harm.</h3>
-    </div>
-
-    <div id="Assumption3" class="step" data-x="0" data-y="1000">
-    <h1>Assumption #3:</h1>
-    <h3>We're already in the <em>trans-human</em> phase. The <em>post-human</em> era is nigh. We need frameworks to respond appropriately.</h3>
-    </div>
-
-
-    <!-- PHYSICAL ENVIRONMENT -->
-
-
-    <div id="PhysicalEnv" class="step" data-x="1500" data-y="-3000">
-    <h1>Physical environment</h1>
-    </div>
-
-    <div id="Genes" class="step slide" data-x="1500" data-y="-2000">
-    <h2>six billion different environments</h2>
-    <p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/5Gc5h4">Micah's DNA</em> via Micah Baldwin on Flickr.</a></p>
-    </div>
-
-
-
-
-
-<div id="BodyAttributes" class="step" data-x="1500" data-y="-1000">
-
-<table id="BodyAttributesTable" class="list-items list-items-large">
-<thead>
-<tr>
-  <th>Age</th>
-  <th>Medical history</th>
-  <th>Psychological disposition</th>
-  <th>Socioeconomic factors</th>
-</tr>
-</thead>
-<tbody>
-<tr>
- <td>
-<ul>
-  <li>Younger people are generally more resilient physically</li>
-  <li>More co-morbidities as we age</li>
-  <li>Physical changes make implantation more risky as we age</li>
-</ul>
-</td>
-<td>
-<ul>
-  <li>Allergies</li>
-  <li>Previous medical conditions may preclude implantation</li>
-  <li>History of infection</li>
-  <li>Previous implants - scarring, 'leftovers'</li>
-  <li>Compromised immune system</li>
-</ul>
-</td>
-<td>
-<ul>
-  <li>Cartesian split - body vs mind?</li>
-  <li>Psychological rejection of implantable devices (eg. 'Twiddlers syndrome')</li>
-  <li>Embodiment of implantable devices into the 'self'</li>
-
-</ul>
-</td>
-
-<td>
-<ul>
-  <li>Ongoing support, maintenance and care</li>
-  <li>Ability to self-care and self-maintain?</li>
-  <li>Costs of ongoing care and ability to service costs</li>
-  <li>Equity - who gets the technology?</li>
-
-</ul>
-</td>
-
-</tr>
-</tbody>
-</table>
-
-</div>
-
-<div id="PhysicalReduceRisk" class="step" data-x="1500" data-y="0">
-<h3>Establish a baseline</h3>
-<h3>Have an implementation plan</h3>
-<h3>Monitor</h3>
-<h3>Embody - or back out the change</h3>
-</div>
-
-<div id="Infection" class="step slide" data-x="1500" data-y="1000">
-<h2>infections are bad</h2>
-<p class="attribution"><strong>Attribution</strong>: Kathy Reid</p>
-</div>
-
-
-<!-- DECOMM ENVIRONMENTS -->
-
-<div id="DecommingEnv" class="step" data-x="3000" data-y="-3000">
-<h1>Environment [de]commissioning</h1>
-</div>
-
-<div id="Cloning" class="step slide" data-x="3000" data-y="-2000">
-<h2>cloning a new env?</h2>
-<p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/ejuqqt">Human Cloning</em> via News Online on Flickr.</a></p>
-</div>
-
-<div id="LungOnAChip" class="step slide" data-x="3000" data-y="-1000">
-<h2>Organ on a chip</h2>
-</div>
-
-<div id="Death" class="step slide" data-x="3000" data-y="0">
-<h2>End of lifecycle planning</h2>
-<p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/6ErLLQ">My father's funeral</em> via Stephan Ridgway on Flickr.</a></p>
-</div>
-
-<div id="EnvironmentManage" class="step" data-x="3000" data-y="1000">
-<h3>Organs on a chip</h3>
-<h3>End of life planning and management</h3>
-</div>
-
-
-
-
-
-
-<!-- DEVELOPMENT CHOICES -->
-
-<div id="DevelopmentApproach" class="step" data-x="4500" data-y="-3000">
-<h1>Development approach</h1>
-</div>
-
-<div id="DangerousThings" class="step slide" data-x="4500" data-y="-2000">
-<h2>Dangerous Things NFC</h2>
-</div>
-
-<div id="Northstar" class="step slide" data-x="4500" data-y="-1000">
-<h2>Northstar v1</h2>
-</div>
-
-<div id="Circadia" class="step slide" data-x="4500" data-y="0">
-<h2>Circadia</h2>
-</div>
-
-<div id="CircadiaImplanted" class="step slide" data-x="4500" data-y="1000">
-<h2>Circadia implanted </h2>
-</div>
-
-<div id="KarenSandler" class="step slide" data-x="4500" data-y="2000">
-<h2>Karen Sandler</h2>
-<p class="attribution"<strong>Attribution</strong>: Wikipedia Commons</p>
-</div>
-
-<div id="DevelopmentManage" class="step" data-x="4500" data-y="3000">
-<h3>Strong community - avoid the orphan tech problem</h3>
-<h3>Open platforms - extendability and scrutiny</h3>
-</div>
-
-
-<!-- TESTING AND QUALITY ASSURANCE -->
-
-<div id="TestingApproach" class="step" data-x="6000" data-y="-3000">
-<h1>Testing  approach</h1>
-</div>
-
-<div id="EmbodimentDrivenDevelopment" class="step" data-x="6000" data-y="-2000">
-<h3>Embodiment driven development</h3>
-</div>
-
-<div id="EmbodimentTests" class="step" data-x="6000" data-y="-1000">
-<h3>How do we test for embodiment?</h3>
-</div>
-
-
-<!-- RELEASE AND DEPLOYMENT -->
-
-<div id="ReleaseDeploymentApproach" class="step" data-x="7500" data-y="-3000">
-<h1>Release and deployment  approach</h1>
-</div>
-
-<div id="NearField" class="step slide" data-x="7500" data-y="-2000">
-<h2>Near field communication</h2>
-<p class="attribution"><strong>Attribution</strong>: <a href="https://flic.kr/p/dALnqq">NFC seal IMAG0351</em> via Gohsuke Takama on Flickr.</a></p>
-</div>
-
-<div id="DeploymentMethods" class="step" data-x="7500" data-y="-1000">
-<h3>Wireless</h3>
-<h3>Bluetooth </h3>
-<h3>NFC </h3>
-<h3>Snip, rip, slip, clip :(</h3>
-</div>
-
-<!-- cONCLUSION -->
-
-<div id="Conclusion" class="step" data-x="9000" data-y="-3000">
-<h1>Conclusion</h1>
-</div>
-
-<div id="ConclusionTakeaways" class="step" data-x="9000" data-y="-2000">
-<h3>We are <em>transhuman</em>, and about to be <em>posthuman</em></h3>
-<h3>We are woefully unprepared for this</h3>
-<h3>We need a set of best practices </h3>
-</div>
-
-<!-- REFERENCES -->
-
-<div id="References" class="step" data-x="10050" data-y="-3000">
-<h1>References</h1>
-<h2>&nbsp;</h2>
-
-<div class="csl-entry">Duarte, B. N. (2014). Entangled Agencies: New Individual Practices of Human-Technology Hybridism through Body Hacking. <i>NanoEthics</i>, <i>8</i>(3), 275–285.</div>
-<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Entangled%20Agencies%3A%20New%20Individual%20Practices%20of%20Human-Technology%20Hybridism%20through%20Body%20Hacking&amp;rft.jtitle=NanoEthics&amp;rft.stitle=NanoEthics&amp;rft.volume=8&amp;rft.issue=3&amp;rft.aufirst=B%C3%A1rbara%20Nascimento&amp;rft.aulast=Duarte&amp;rft.au=B%C3%A1rbara%20Nascimento%20Duarte&amp;rft.date=2014-12-01&amp;rft.pages=275-285&amp;rft.spage=275&amp;rft.epage=285&amp;rft.issn=1871-4757"></span>
-<div class="csl-entry">Esch, M. B., King, T. L., &amp; Shuler, M. L. (2011). The Role of Body-on-a-Chip Devices in Drug and Toxicity Studies. <i>Annual Review of Biomedical Engineering</i>, <i>13</i>(1), 55–72. http://doi.org/10.1146/annurev-bioeng-071910-124629</div>
-<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1146%2Fannurev-bioeng-071910-124629&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The%20Role%20of%20Body-on-a-Chip%20Devices%20in%20Drug%20and%20Toxicity%20Studies&amp;rft.jtitle=Annual%20Review%20of%20Biomedical%20Engineering&amp;rft.stitle=Annu.%20Rev.%20Biomed.%20Eng.&amp;rft.volume=13&amp;rft.issue=1&amp;rft.aufirst=M.B.&amp;rft.aulast=Esch&amp;rft.au=M.B.%20Esch&amp;rft.au=T.L.%20King&amp;rft.au=M.L.%20Shuler&amp;rft.date=2011-07-14&amp;rft.pages=55-72&amp;rft.spage=55&amp;rft.epage=72&amp;rft.issn=1523-9829"></span>
-<div class="csl-entry">Hacking, I. (2005). The Cartesian vision fulfilled: analogue bodies and digital minds. <i>Interdisciplinary Science Reviews</i>, <i>30</i>(2), 153–166. http://doi.org/10.1179/030801805X25963</div>
-<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1179%2F030801805X25963&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The%20Cartesian%20vision%20fulfilled%3A%20analogue%20bodies%20and%20digital%20minds&amp;rft.jtitle=Interdisciplinary%20Science%20Reviews&amp;rft.stitle=Interdiscip.%20Sci.%20Rev.&amp;rft.volume=30&amp;rft.issue=2&amp;rft.aufirst=Ian&amp;rft.aulast=Hacking&amp;rft.au=Ian%20Hacking&amp;rft.date=2005-06-01&amp;rft.pages=153-166&amp;rft.spage=153&amp;rft.epage=166&amp;rft.issn=0308-0188"></span>
-<div class="csl-entry">Norton, Q. (n.d.). The Next Humans - Body Hacking and Human Enhancement. Retrieved from http://www.ambiguous.org/quinn/bodyhacking.pdf</div>
-<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=document&amp;rft.title=The%20Next%20Humans%20-%20Body%20Hacking%20and%20Human%20Enhancement&amp;rft.identifier=http%3A%2F%2Fwww.ambiguous.org%2Fquinn%2Fbodyhacking.pdf&amp;rft.aufirst=Quinn&amp;rft.aulast=Norton&amp;rft.au=Quinn%20Norton"></span>
-<div class="csl-entry">Thomas, D. (2005). Hacking the body: code, performance and corporeality. <i>New Media &amp; Society</i>, <i>7</i>(5), 647–662.</div>
-<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Hacking%20the%20body%3A%20code%2C%20performance%20and%20corporeality.&amp;rft.jtitle=New%20Media%20%26%20Society&amp;rft.stitle=New%20Media%20%26%20Society&amp;rft.volume=7&amp;rft.issue=5&amp;rft.aufirst=Douglas&amp;rft.aulast=Thomas&amp;rft.au=Douglas%20Thomas&amp;rft.date=2005-10&amp;rft.pages=647-662&amp;rft.spage=647&amp;rft.epage=662&amp;rft.issn=14614448"></span>
-
-</div>
-
-<!-- FLUFF -->
+  <div idp="RESTmore" class="step slide" data-x="0" data-y="1000">
+    <h1>More on ReST</h1>
+    <h4>Is a type of <em>architecture</em></h4>
+    <h4>Way of <strong>abstracting</strong> data</h4>
+    <h4>Hides the underlying <strong>complexity</strong> of the system</h4>
+    <h4>Way of leveraging <strong>multiple</strong> data sets for new and useful tools</h4>
+    <h4>Building tools <strong>on top</strong> of existing platfroms - ie Twitter, Xero etc</h4>
+  </div>
+
+  <div idp="APIkeys" class="step slide" data-x="0" data-y="2000">
+    <h1>API keys</h1>
+    <h4>Used to identify the <strong>source</strong> of an API request</h4>
+    <h4>Can be <strong>paid</strong> or <strong>free</strong></h4>
+    <h4>Used to provide different <strong>levels</strong> of access</h4>
+    <h4>Used to do <strong>rate limiting</strong></h4>
+  </div>
+
+  <div idp="RateLimiting" class="step slide" data-x="0" data-y="3000">
+    <h1>Rate Limiting</h1>
+    <h4>A method of <strong>restricting the volume</strong> of API requests that are able to be sent</h4>
+    <h4>Mechanism to stop the server from being <strong>overloaded</strong></h4>
+  </div>
+
+  <div idp="UsefulTools" class="step slide" data-x="0" data-y="4000">
+    <h1>Useful tools</h1>
+    <h4>Postman - https://www.getpostman.com/</h4>
+    <h4>Insomnia - https://insomnia.rest</h4>
+    <h4>Hurlit - https://www.hurl.it/</h4>
+    <h4>HTTP Requester https://addons.mozilla.org/En-us/firefox/addon/httprequester/</h4>
+  </div>
+
+  <div id="WhatProblem" class="step slide" data-x="1500" data-y="-3000">
+    <h1>What problem are you trying to solve?</h1>
+    <h4>Before you start building your tool, it's a good idea to have a think about what problem you're trying to solve. There's some good techniques to approach this - such as user stories, wireframing, or something as simple as sketching out the flow of how you want tool to work.</h4>
+  </div>
+
+  <div id="QuerySyntax" class="step slide" data-x="1500" data-y="-2000">
+    <h1>Common formats for sending requests to APIs</h1>
+    <h4><pre>api.company.com/object/id</pre></h4>
+    <h4><pre>api.company.com/book/3889</pre></h4>
+    <h4><pre>api.twitter.com/people/743212</pre></h4>
+    <h4><pre>api.company.com/?q=myQueryTerm&amp;aparameter=value&amp;parameter2=value2</pre></h4>
+  </div>
+
+  <div id="DataStructures" class="step slide" data-x="1500" data-y="-1000">
+    <h1>Understanding data structures</h1>
+    <h4>Often you'll need to use more than one API to build your tool - different APIs return data in different ways - some return XML, some return JSON, so you need to learn skills in dealing with both of these data types. </h4>
+  </div>
+
+  <div id="JSON" class="step slide" data-x="1500" data-y="0">
+    <h1>JSON</h1>
+    <h4><pre>
+    {
+      "id:": 1482810384,
+      "name": "Tim Tam",
+      "species": "canine",
+      "breed": "Pembroke Welsh Corgi",
+      "dob": "15 March 2014",
+      "faveFood": "sardines",
+      "faveWord": "walkies",
+      "offspring": null
+    }</pre></h4>
+  </div>
+
+  <div id="JSON" class="step slide" data-x="1500" data-y="1000">
+    <h1>XML</h1>
+    <img src="img/xml.png">
+  </div>
+
+  <div id="TreasureHunt" class="step slide" data-x="3000" data-y="-3000">
+    <h1>Treasure Hunt!</h1>
+    <h4>Deakin University opened in Geelong in the 1970s. Who was the first Vice Chancellor? What was their full name? What was their discipline? What was unusual about their approach to this discipline?</h4>
+  </div>
+
+  <div id="Query" class="step slide" data-x="3000" data-y="-2000">
+    <h1>Breaking down the query to the TROVE API</h1>
+    <h4>http://api.trove.nla.gov.au/result?q=geelong AND deakin university&amp;zone=newspaper&amp;l-decade=197&amp;encoding=json&amp;key=vitbcjb0reu355og&amp;sortby=relevance</h4>
+  </div>
+
+  <div id="NextSteps" class="step slide" data-x="3000" data-y="-1000">
+    <h1>Next Steps</h1>
+    <h4>You will need some basic coding skills, or to partner with someone who has developer skills</h4>
+    <h4>Try a <strong>hackathon</strong> like GovHack, or run your own hackathon </h4>
+    <h4><a href="https://www.programmableweb.com/news/49-library-apis-librarything-worldcat-search-and-bookshare/2012/11/06">https://www.programmableweb.com/news/49-library-apis-librarything-worldcat-search-and-bookshare/2012/11/06</a></h4>
+  </div>
+
+
+  <!-- FLUFF -->
 
 <div id="overview" class="step" data-x="0" data-y="0" data-scale="10">
 </div>

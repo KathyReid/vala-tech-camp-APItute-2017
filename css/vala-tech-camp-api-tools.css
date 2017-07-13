@@ -76,6 +76,11 @@ table {
     border-spacing: 0;
 }
 
+pre {
+  font-family: "Courier", monospace;
+  font-size: 60%;
+}
+
 /*
     Now here is when interesting things start to appear.
 
@@ -134,7 +139,7 @@ header ul li img {
 }
 
 header ul li:after {
-  content:" &hellip; ";
+  content:"    ";
 }
 
 header ul li:last-child:after{
@@ -760,7 +765,7 @@ h2 {
   color: black;
   text-shadow: 2px 2px #6D6356;
   border-bottom: 1px solid #6D6356;
-  margin: 10px 0 0 0;
+  margin: 7% 0 0 0;
   text-transform: capitalize;
 }
 
@@ -776,9 +781,9 @@ h4 {
   margin: 1% 0 0 0;
 }
 
-
-
-
+#RESTVerbsTable {
+  width: 90vw;
+}
 
 .list-items thead {
   font-weight: bolder;
@@ -786,9 +791,9 @@ h4 {
 
 .list-items th, .list-items td {
   border: 2px solid #6D6356;
-  padding: 1%;
+  padding: 2%;
   color: black;
-  font-size: 90%;
+  font-size: 230%;
   border-collapse: collapse;
 }
 
@@ -811,7 +816,7 @@ h4 {
   color: black;
   text-shadow: 1px 1px white;
   position: relative;
-  top: 90vh;
+  top: 70vh;
   left: 40vw;
 }
 
@@ -823,9 +828,10 @@ h4 {
   border-bottom: 0.25px solid white;
 }
 
-#Pebble {
-  background: url(../img/10345415843_9a66c22f70_o.jpg) no-repeat center center fixed;
+#TinCans {
+  background: url(../img/4960579336_f7607c704a_o.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
